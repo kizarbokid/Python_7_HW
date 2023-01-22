@@ -38,3 +38,30 @@ def save_success():
 
 def find_what():
     return input('Введите поисковой запрос и нажмите Enter: ')
+
+def show_and_confirm__deletion(records_list:list):
+    if len(records_list)>0:
+        for item in records_list:
+            print(*item)
+    else:
+        print('По запросу не найдено записей в телефонной книге!')
+        return 'n'
+    return input('Подтвердите удаление...(y/n): ')
+def deletion_success(response):
+    print(response)
+
+def show_and_confirm_changes(records_list:list):
+    if len(records_list)>0:
+        for item in records_list:
+            print(*item)
+    else:
+        print('По запросу не найдено записей в телефонной книге!')
+        return 'n'
+    return input('Подтвердите изменение...(y/n): ')
+
+
+def deletion_success(response):
+    print(response)
+
+def change_success(response):
+    print(response)
